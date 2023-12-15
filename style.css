@@ -1022,6 +1022,12 @@ nav ul li a:hover::before {
   margin: 80px auto 0 auto;
   display: flex;
 }
+.Work .container_box .container .wrapper{
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+}
+
 
 .Work .container .box {
   width: 100%;
@@ -1148,7 +1154,6 @@ nav ul li a:hover::before {
   display: flex;
   justify-content: center;
   width: 90%;
-  
   padding: 10px;
 }
 .modal-content .contents .afterbox{
@@ -1160,20 +1165,24 @@ nav ul li a:hover::before {
   margin-left: 100px;
 }
 
-.modal-content a {
-  margin-left: 20%;
-  padding: 5px 10px;
-  border: 2px dashed brown;
-  text-decoration: none;
-}
-
-.modal-content a:hover {
-  font-weight: bold;
-  background-color: #f0e4e1;
-}
-.mission{
+.modal-content .mission{
   font-size: 24px;
   font-weight: bold;
+}
+.modal-content .mission br{
+  display: none;
+}
+.modal-content .mission a {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-left: 50%;
+  border: 2px dashed brown;
+  text-decoration: none;
+  background-color: #f0e4e1;
+}
+.modal-content .mission a:hover {
+  font-weight: bold;
+  background-color: #fff;
 }
 .modal-content .contents .box img {
   width: 25%;
@@ -1188,11 +1197,6 @@ nav ul li a:hover::before {
 .index{
   z-index: 1;
   position: relative;
-}
-.wrapper{
-  display: flex;
-  width: 70%;
-  margin: 0 auto;
 }
 @media(max-width:800px) {
   .Work .section-line {
@@ -1236,17 +1240,18 @@ nav ul li a:hover::before {
 }
 
 @media (max-width:430px) {
+  .Work .container_box .container .wrapper{
+    display: block;
+    width: 80%;
+  }
   .Work .container {
     width: 100%;
-    display: flex;
-    margin-top: 100px;
-  }
-  .Work .container .wrapper{
+    height: 140vh;
+    margin: 0px auto 0 auto;
     display: block;
   }
-
   .Work .container .box {
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
     width: 100%;
     border: 1px solid #f0e4e1;
     background-color: rgb(255, 255, 255, 0.2);
@@ -1293,35 +1298,44 @@ nav ul li a:hover::before {
   }
 
   .Work .section-line {
-    margin-bottom: 0;
+    margin-bottom: 10vh;
   }
 
-  /* モーダルの中身(responsive) */
-  .modal-content a {
-    margin: 5% 0% 5% 50%;
-    padding: 5px 10px;
+  /* モーダルの中身(sp screen) */
+  .modal-content{
+    height: auto;
   }
-
-  .modal-content a:hover {
-    font-weight: bold;
-    background-color: #f0e4e1;
+  .modal-content .mission{
+    font-size: 16px;
   }
-
+  .modal-content .mission br{
+    display: block;
+  }
+  .modal-content .mission a {
+    font-size: 16px;
+    padding: 1px 10px;
+    margin-left: 40%;
+    border: 1px dashed brown;
+  }
   .modal-content .contents .box {
+    display: block;
     width: 100%;
     margin: 10px 0px;
   }
+  .modal-content .contents .box:nth-child(2){
+    display: block;
+  }
 
   .modal-content .contents .box img {
-    width: 100px;
-    height: 80px;
-    object-fit: cover;
+    width: 100%;
+    object-fit: contain;
   }
 
   .modal-content .contents .box p {
-    width: 90%;
-    margin: 5px 5px;
+    width: 100%;
+    margin: 5px;
   }
+  
 
 
 }
@@ -1330,7 +1344,6 @@ nav ul li a:hover::before {
 
 /* section Will */
 .Will .container {
-  
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -1363,19 +1376,12 @@ nav ul li a:hover::before {
 }
 
 @media(max-width:430px) {
-  .Will .section-line {
-    margin-top: 100px;
-    /*  */
-    margin-top: 70vh;
-    /*  */
-  }
-
   .Will .container {
     width: 90%;
   }
 
   .Will .container img {
-display: none;  }
+    display: none;  }
 
   .Will .container .box {
     width: 100%;
